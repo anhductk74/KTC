@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nameInput">
+    <button id="formSubmit">Send</button>
+    <div id="nameError"></div>
+
+    <script>
+        const nameError = document.getElementById('nameError')
+        document.getElementById('formSubmit').addEventListener('click', ()=>{
+            const text = document.getElementById('nameInput')
+            if(text.value.trim() === ""){
+                nameError.textContent = "Ban chua nhap"
+                text.style.border = "2px solid red"
+            } else {
+                nameError.textContent = ""
+                text.style.border = "2px solid green"
+                alert("ban vua nhap: "+ text.value)
+            }
+        })
+    </script>
+</body>
+</html>

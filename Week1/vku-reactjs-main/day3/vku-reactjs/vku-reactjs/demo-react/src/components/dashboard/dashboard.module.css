@@ -1,0 +1,90 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 330px;
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.rowItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rowItembottom span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.customspan {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.infor{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.rowtop {
+    display: flex;
+    width: 100%;
+    font-weight: normal;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .highlight {
+    font-size: 15px;
+    background-color: #E9FFEB;
+    border-radius: 25px;
+    padding: 8px 10px;
+}
+
+.right .feeds {
+    font-size: 15px;
+    background-color: #FDE3FF;
+    border-radius: 25px;
+    padding: 8px 10px;
+}
+.rowmiddle h3 {
+    margin: 0;
+}
+
+.rowmiddle p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.rowbottom {
+    display: flex;
+    width: 100%;
+    column-gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contaipercent {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #e1e2e1;
+}
+
+.percent {
+    width: 80%;
+    height: 8px;
+    background-color: #1aad3f;
+    border-radius: 20px;
+    position: relative;
+}
+

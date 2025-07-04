@@ -1,0 +1,32 @@
+/* style.css */
+body.dark-theme {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+body.dark-theme .card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+body.dark-theme .btn-outline-dark {
+  background-color: #f8f9fa;
+  color: #121212;
+}
+
+.note {
+  min-width: 120px;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+}
+
+.note .delete-note {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  cursor: pointer;
+  color: white;
+}

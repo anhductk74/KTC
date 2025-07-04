@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="bioInput" maxlength="200" rows="5" cols="40" placeholder="Nhập mô tả..."></textarea>
+    <p id="charCount">Còn lại: 200 ký tự</p>
+
+    <script>
+        const textarea = document.getElementById("bioInput");
+        const counter = document.getElementById("charCount");
+        const maxLength = 200;
+
+        textarea.addEventListener("input", () => {
+            const remaining = maxLength - textarea.value.length;
+            counter.textContent = `Còn lại: ${remaining} ký tự`;
+});
+
+    </script>
+</body>
+</html>

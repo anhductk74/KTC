@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row-tile" style="--color: #E54D4C">
+                BANWIDTH
+            </div>
+            <div class="row-percent-warrap">
+                <div class="row-percent" style="--color: #F75354">20%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-tile" style="--color: #2DB8CD">
+                STORAGE
+            </div>
+            <div class="row-percent-warrap">
+                <div class="row-percent" style="--color: #31C8DD">50%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-tile" style="--color: #4AC25E">
+                USERS
+            </div>
+
+            <div class="row-percent-warrap">
+                <div class="row-percent" style="--color: #51D567">70%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-tile" style="--color: #E9C318">
+                VISITORS
+            </div>
+            <div class="row-percent-warrap">
+                <div class="row-percent" style="--color: #FCD518">30%</div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    const percentElements = document.querySelectorAll('.row-percent');
+    percentElements.forEach((el) => {
+      const target = parseInt(el.textContent.trim(), 10);
+      let progress = 0;
+      el.textContent = '0%';
+
+      const interval = setInterval(() => {
+        if (progress >= target) {
+          clearInterval(interval);
+        } else {
+          progress++;
+          el.style.width = progress + '%';
+          el.innerHTML = `<span>${progress}%</span>`;
+        }
+      }, 10);
+    });
+  </script>
+</body>
+</html>

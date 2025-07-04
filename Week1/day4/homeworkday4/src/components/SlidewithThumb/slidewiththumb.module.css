@@ -1,0 +1,41 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listImg {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.listImgItem img{
+    width: 60px;
+    object-fit: cover;
+}
+.listImgItem {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 0;
+}
+.active {
+    border: 2px solid #e44848;
+}
+
+.btn {
+    background-color: #696969;
+    color: #fff;
+    border: none;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+

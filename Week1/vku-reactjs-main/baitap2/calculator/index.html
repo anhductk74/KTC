@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="display" class="form-control" readonly>
+
+  <div class="row g-2 mt-2">
+    <div class="col-6"><button class="btn btn-clear w-100 btn-calc" onclick="clearDisplay()">C</button></div>
+    <div class="col-3"><button class="btn btn-operator w-100 btn-calc" onclick="appendValue('/')">÷</button></div>
+    <div class="col-3"><button class="btn btn-operator w-100 btn-calc" onclick="appendValue('*')">×</button></div>
+
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('7')">7</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('8')">8</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('9')">9</button></div>
+    <div class="col-3"><button class="btn btn-operator w-100 btn-calc" onclick="appendValue('-')">−</button></div>
+
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('4')">4</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('5')">5</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('6')">6</button></div>
+    <div class="col-3"><button class="btn btn-operator w-100 btn-calc" onclick="appendValue('+')">+</button></div>
+
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('1')">1</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('2')">2</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('3')">3</button></div>
+    <div class="col-3"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('.')">.</button></div>
+
+    <div class="col-6"><button class="btn btn-number w-100 btn-calc" onclick="appendValue('0')">0</button></div>
+    <div class="col-6"><button class="btn btn-equal w-100 btn-calc" onclick="calculateResult()">=</button></div>
+  </div>
+</div>
+
+<script>
+    function appendValue(val) {
+        const display = document.getElementById("display");
+        const current = display.value;
+        const operators = ['+', '-', '*', '/'];
+
+        if (operators.includes(val)) {
+            if (operators.includes(current.slice(-1))) return;
+        }
+
+        if (val === '.' && current.slice(-1) === '.') return;
+
+        display.value += val;
+    }
+
+    function clearDisplay() {
+        document.getElementById("display").value = "";
+    }
+
+    function calculateResult() {
+        const display = document.getElementById("display");
+        try {
+            const result = eval(display.value);
+            display.value = result;
+        } catch {
+            display.value = "Lỗi";
+        }
+    }
+</script>
+
+
+</body>
+</html>

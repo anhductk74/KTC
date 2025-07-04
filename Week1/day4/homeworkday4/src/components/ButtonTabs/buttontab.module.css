@@ -1,0 +1,49 @@
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tabItem {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: pointer;
+  flex-basis: 25%;
+  padding: 15px 0;
+  text-align: center;
+  border: none;
+  transition: 0.3s;
+}
+
+
+.content {
+    text-align: center;
+    color: #666;
+    line-height: 1.5;
+}
+
+.tabItem2 {
+    background-color: #ffffff;
+    color: #666;
+    cursor: pointer;
+    flex-basis: 25%;
+    padding: 15px 0;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+    border-bottom: 1px solid #4e4d4d;
+}
+
+.active {
+  background: #47b475;
+  color: #fff;
+}

@@ -1,0 +1,19 @@
+#root {
+  font-family: roboto, sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  column-gap: 40px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}

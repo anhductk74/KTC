@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .hoverBox{
+            width: 200px;
+            height: 200px;
+            border: 2px solid gray;
+            background-color: antiquewhite;
+        }
+    </style>
+    <div class="hoverBox"></div>
+
+    <script>
+        const box = document.querySelector(".hoverBox")
+        box.addEventListener('mouseover', ()=>{
+            box.style.backgroundColor = "lightblue"
+        })
+        box.addEventListener('mouseout', ()=>{
+            box.style.backgroundColor = "antiquewhite"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    color: black;
+    border: 1px solid blanchedalmond;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container:hover {
+    background-color: yellow;
+}

@@ -1,0 +1,32 @@
+
+.row {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #F5F5F5;
+  background-color: #FAFAFA;
+  margin: 15px;
+}
+
+.row-percent-warrap{
+    width: 100%;
+}
+.row-tile {
+    padding: 16px;
+    width: 120px;
+    font-weight: bold;
+    background-color: var(--color);
+    color: aliceblue;
+    text-align: right;
+}
+
+.row-percent {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--color);
+  font-weight: bold;
+  color: aliceblue;
+}
+
+span{
+    padding-left: 20px;
+}

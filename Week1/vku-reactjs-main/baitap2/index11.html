@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="infoPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consectetur. Repudiandae nisi saepe minus, id nihil molestias adipisci consequatur reprehenderit voluptatum vel eum porro explicabo esse perferendis ratione deleniti laborum!</h1>
+    <button id="hideParaBtn">Hide</button>
+
+    <script>
+        document.getElementById("hideParaBtn").addEventListener('click',()=>{
+            const text = document.getElementById('infoPara')
+            text.style.display = "none"
+        })
+    </script>
+</body>
+</html>

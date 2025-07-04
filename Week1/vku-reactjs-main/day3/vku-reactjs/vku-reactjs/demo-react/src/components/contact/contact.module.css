@@ -1,0 +1,38 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 330px;
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.rowItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.infor{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 10px;
+}
+p {
+    margin: 0;
+}
+
+.job {
+    opacity: 0.6;
+}
+
+img {
+    height: 100;
+    margin: 0;
+}

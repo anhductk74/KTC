@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="greetingText"></h1>
+
+    <script>
+        function realtime(){
+            let time = new Date();
+            const hours = String(time.getHours()).padStart(2, "0");
+            const minutes = String(time.getMinutes()).padStart(2, "0");
+            const seconds = String(time.getSeconds()).padStart(2, "0");
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            console.log(timeString)
+            document.getElementById("greetingText").textContent = "Hello: "+timeString;
+        }
+        realtime();
+    </script>
+</body>
+</html>

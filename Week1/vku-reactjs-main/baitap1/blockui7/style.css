@@ -1,0 +1,71 @@
+.process-flow {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.layout{
+    flex-direction: column;
+}
+.process-icon-circle {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white; 
+    flex-direction: column;
+}
+
+.process-icon {
+    font-size: 3.5rem; 
+}
+
+.process-label {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #555;
+}
+
+.process-arrow {
+    font-size: 2rem; 
+    color: #ccc; 
+    margin: 0 15px;
+}
+
+.bg-red {
+    background-color: #f77f7f; 
+}
+
+.bg-blue-process {
+    background-color: #87ceeb; 
+}
+
+.bg-green-process {
+    background-color: #90ee90; 
+}
+
+.bg-purple-process {
+    background-color: #b19cd9; 
+}
+
+@media (max-width: 767.98px) {
+    .process-flow .col-lg-3,
+    .process-flow .col-md-6 {
+        margin-bottom: 30px; 
+    }
+
+    .process-arrow {
+        display: none !important; 
+    }
+}
