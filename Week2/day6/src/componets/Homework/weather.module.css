@@ -1,0 +1,133 @@
+.container {
+  width: 400px;
+  background-color: #7FAED1;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 40px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+
+.header {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  color: #F9FDFF;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iconHeader {
+  display: flex;
+  column-gap: 5px;
+}
+
+.searchBar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #F9FDFF;
+  border-radius: 20px;
+
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.weather{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  color: #ffffff;
+  align-items: center;
+}
+
+.weatherIcon img {
+  width: 100px;
+  color: #ffffff;
+  /* filter: grayscale(100%); */
+}
+
+.temperature h1{
+  font-size: 90px;
+}
+h3{
+  color: #ffffff;
+  font-size: 40px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.forecast {
+  border-radius: 25px;
+  background-color: #C5DBEA;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.forecastLeft, .forecastRight {
+  text-align: center;
+  width: 140px;
+}
+
+.title {
+  font-size: 20px;
+  color: #737475;
+}
+.value {
+  font-size: 28px;
+  font-weight: 550;
+}
+
+.verticalLine {
+  width: 1px;           /* độ rộng của đường kẻ */
+  height: 70px;   
+  background-color: #AFC8D9; /* màu sắc đường kẻ */
+}
+
+.footer {
+  background-color: #FAFAFA;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 25px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer h1 {
+  font-size: 28px;
+  color: #737475;
+}
+
+.weatherItem {
+  text-align: center;
+}
+.temperatureNow {
+  font-size: 28px;
+}
+.timeNow {
+  font-size: 20px;
+  color: #737475;
+}
+
+
+
+
+
+
+
+
+
