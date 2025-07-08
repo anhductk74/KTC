@@ -13,7 +13,6 @@ const WeatherComponent = () => {
     second: '2-digit'
   });
 
-  const [hourly, setHourly] = useState([])
 
   const handleChangeLocation = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLocation(e.target.value)

@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6801;
+    color: #fff;
+    padding: 0px 30px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header_right ul{
+    display: flex;
+    gap: 25px;
+}
+
+.header_right ul li{
+    list-style: none;
+}
+.header_right ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.activeLink{
+    text-decoration: underline !important;
+}
