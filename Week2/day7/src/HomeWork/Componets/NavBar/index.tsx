@@ -54,6 +54,7 @@ export default function NavBar() {
             <div className={styles.navbar_container}>
                 {navList.map((item, index) => (
                     <NavLink to={item.link}
+                        key={index}
                         className={({ isActive }) => isActive ? styles.active + ' ' + styles.navbar : styles.navbar}>
                             <div className={styles.navbar_icon}>{item.icon}</div>
                             <div className={styles.navbar_title}>{item.title}</div>
