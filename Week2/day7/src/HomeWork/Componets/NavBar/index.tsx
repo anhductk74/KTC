@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './NavBar.module.css'
 import { Users,Plus,Map,ChartColumn,Building2,UserCheck,History,Settings     } from 'lucide-react';
 import { NavLink } from 'react-router';

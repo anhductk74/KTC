@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './HomePage.module.css';
-import Navbar from '../../Components/NavBar';
 
 type Product = {
   id: number;
