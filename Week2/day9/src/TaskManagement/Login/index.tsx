@@ -26,6 +26,10 @@ const Login = () => {
         formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
+        defaultValues: {
+            username: "tungnt@softech.vn",
+            password: "123456789"
+        }
     })
     const onSubmit = (data: any) => {
         loginService(data).then(() => {
@@ -47,13 +51,13 @@ const Login = () => {
                 <h2>Sign in</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className={styles.inputBox}>
-                        <input type="text" required={false} placeholder="Username" {...register("username")} value="tungnt@softech.vn" />
+                        <input type="text" required={false} placeholder="Username" {...register("username")}  />
                         <span>Username</span>
                         <i></i>
                     </div>
                     {errors.username && <p>{errors.username.message}</p>}
                     <div className={styles.inputBox}>
-                        <input type="password" required={false} placeholder="Password" {...register("password")} value="123456789" />
+                        <input type="password" required={false} placeholder="Password" {...register("password")} />
                         <span>Password</span>
                         <i></i>
                     </div>
