@@ -38,7 +38,7 @@ const Navbar = () => {
             My Tasks
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/create_task"
             className={({ isActive }) =>
@@ -47,7 +47,7 @@ const Navbar = () => {
           >
             About
           </NavLink>
-        </li>
+        </li> */}
       </ul>
       <div className='flex items-center gap-2'>
         <p className='text-sm font-medium text-gray-700'>{user?.email}</p>
