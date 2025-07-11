@@ -7,19 +7,6 @@ import UpdateTask from '../UpdateTask'
 import type { Task } from '../Model/Task'
 
 
-// type OurTask = {
-//     id: string
-//     title: string
-//     description: string
-//     start_date: string
-//     due_date: string
-//     priority: string
-//     assignee_id: string
-//     created_time: string
-//     updated_time: string
-//     status: string
-// }
-
 const MyTask = () => {
     const [showForm, setShowForm] = useState(false);
     const [reload, setReload] = useState(false);
@@ -27,6 +14,8 @@ const MyTask = () => {
     const [taskUpdate, setTaskUpdate] = useState<Task | null>(null);
     const { user } = useContext(AuthContext)
     const [myTask, setMyTask] = useState<Task[]>([])
+    const [priority, setPriority] = useState<string>('')
+    const [status, setStatus] = useState<string>('')
     useEffect(() => {
         myTaskService(user?.id ?? 0).then((res) => {
             setMyTask(res)
@@ -51,15 +40,54 @@ const MyTask = () => {
         setShowUpdateForm(true);
     }
 
+    const handleFilter = () => {
+        if (priority === '' && status === '') {
+          // Reload lại danh sách gốc
+          setReload(!reload);
+          return;
+        }
+      
+        const filteredTasks = myTask.filter((task) => {
+          const matchesPriority = priority ? task.priority === priority : true;
+          const matchesStatus = status ? task.status === status : true;
+          return matchesPriority && matchesStatus;
+        });
+      
+        setMyTask(filteredTasks);
+      };
+      
+
     return (
         <div className="overflow-x-auto p-1">
-            <div className="p-2 flex justify-end">
+            <div className="p-2 flex justify-between">
+                <div className="flex items-center gap-2">
+                    <p className="text-white">PRIORITY</p>
+                    <select className="bg-white text-gray-700 px-4 py-2 rounded" onChange={(e) => setPriority(e.target.value)}>
+                        <option value="">All</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <p className="text-white">STATUS</p>
+                    <select className="bg-white text-gray-700 px-4 py-2 rounded" onChange={(e) => setStatus(e.target.value)}>
+                        <option value="">All</option>
+                        <option value="to_do">To-Do</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onClick={() => handleFilter()}>
+                        Filter
+                    </button> 
+                    
+                </div>
+
                 <button
                     onClick={() => setShowForm(true)}
                     className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
                 >
                     + Add New Task
                 </button>
+                
 
                 {showForm && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">

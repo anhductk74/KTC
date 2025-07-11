@@ -38,16 +38,6 @@ const Navbar = () => {
             My Tasks
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink
-            to="/create_task"
-            className={({ isActive }) =>
-              isActive ? 'text-blue-600 border-b-2 border-blue-600 pb-1' : 'hover:text-blue-500'
-            }
-          >
-            About
-          </NavLink>
-        </li> */}
       </ul>
       <div className='flex items-center gap-2'>
         <p className='text-sm font-medium text-gray-700'>{user?.email}</p>
