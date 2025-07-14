@@ -9,6 +9,7 @@ const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setCart((prev) => [...prev, product]);
+    alert(`${product.name} đã được thêm vào giỏ hàng`);
   };
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
