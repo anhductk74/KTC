@@ -39,10 +39,10 @@ const BuyerForm = () => {
   };
 
   return (
-    <div>
+    <div className='w-full max-w-md'>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md space-y-4"
+        className="w-full max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md space-y-4"
       >
         <h2 className="text-2xl font-semibold text-center text-gray-800">Buyer Form</h2>
 

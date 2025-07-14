@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/cart" element={
-            <div className="grid md:grid-cols-2 gap-6 p-6">
+            <div className="w-full flex justify-around p-6">
               <CartList />
               <BuyerForm />
             </div>
