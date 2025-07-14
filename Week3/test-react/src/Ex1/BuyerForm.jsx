@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useCart } from '../Ex2/CartProvider';
 
 const schema = yup
   .object({
@@ -23,6 +24,7 @@ const schema = yup
   .required();
 
 const BuyerForm = () => {
+    const { cart, totalPrice } = useCart();
   const {
     register,
     handleSubmit,
@@ -32,7 +34,8 @@ const BuyerForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
+    const { name, email, address } = data;
+    console.log(name, email, address, cart, "Total Price: "+totalPrice);
   };
 
   return (
