@@ -28,6 +28,7 @@ const BuyerForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -35,6 +36,8 @@ const BuyerForm = () => {
 
   const onSubmit = (data) => {
     const { name, email, address } = data;
+    reset();
+    alert("Form submitted successfully");
     console.log(name, email, address, cart, "Total Price: "+totalPrice);
   };
 
